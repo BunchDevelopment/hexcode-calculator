@@ -1,38 +1,127 @@
-.App {
+html {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Digital-7";
+  src: url("./fonts/digital-7.woff")
+}
+
+body {
+  background-color: #666666;
+}
+
+.calc-body {
+  margin: 0 auto;
+  width: 752px;
+}
+
+.color-view {
+  height: 128px;
+  width: 50%;
+  margin: 16px auto;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px 0px #444444 inset,
+  -4px -4px 4px 0px #aaaaaa inset;
+}
+
+.code-screen {
   text-align: center;
+  margin: 16px auto;
+  box-shadow: 4px 4px 4px 0px #444444 inset,
+              -4px -4px 4px 0px #aaaaaa inset;
+  background-color: #363430;
+  width: 224px;
+  height: 80px;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sc1 {
+  grid-column: 1 / span 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sc2 {
+  grid-column: 4 / span 2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sc3 {
+  grid-column: 7 / span 2;
 }
 
-.App-link {
-  color: #61dafb;
+.code-screen p {
+  margin: 0;
+  font-size: 64px;
+  color: #ff9800;
+  padding-left: 8px;
+  padding-right: 16px;
+  padding-top: 12px;
+  font-family: "Digital-7";
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.keypad {
+  margin: 0 auto;
+  width: 700px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding-left: 24px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px 0px #444444,
+              -4px -4px 4px 0px #aaaaaa;
+              background-color: #666666
+  
+}
+
+button {
+  cursor: pointer;
+  border-radius: 16px;
+  height: 60px;
+  width: 80px;
+  display: grid;
+  place-content: center;
+  box-shadow: -4px -4px 4px 0px #aaaaaa,
+  4px 4px 4px 0 #444444;
+  overflow: hidden;
+  margin: 8px;
+  font-size: 24px;
+  color:#ff9800;
+  outline: none;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: #666666;
+}
+
+
+button:active {
+  box-shadow: -4px -4px 4px 0px #aaaaaa inset,
+  4px 4px 4px 0px #444444 inset;
+}
+
+.green
+{
+  color: #12cf01;
+}
+
+.comp-button-one, .comp-button-two {
+  color: #ffffff;
+}
+
+.comp-button-one {
+  grid-column: 1/ span 3;
+  width: auto;
+}
+.comp-button-two {
+  grid-column: 5/ span 3;
+  width: auto;
+
+}
+
+.screens {
+  width: 700px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  margin: 16px auto;
+
 }
